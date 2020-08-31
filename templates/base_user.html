@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{% load static %}
+{%block ext_css%}
+    {{block.super}}
+    <link rel="stylesheet" href="{% static 'axf/user/css/user.css'%}">
+{%endblock%}
+
+{%block ext_js%}
+{{block.super}}
+<!--用于表单提交时，在前端进行密码加密，防止在网页检查上看到，用于注册、登录和密码重置页面-->
+<script type="text/javascript" src="{%static 'js/md5.js'%}"></script>
+{%endblock%}
+{% block header %}
+<header></header>
+{%endblock%}
